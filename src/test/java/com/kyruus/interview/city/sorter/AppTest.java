@@ -14,7 +14,7 @@ public class AppTest extends TestCase
     {
         try
         {
-            App.main(new String[1]);
+            App.main(new String[] {"input.csv","City"});
         }
         catch(final Exception e)
         {

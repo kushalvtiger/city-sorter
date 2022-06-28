@@ -15,14 +15,14 @@ public class App
     /**
      * Application's main method. 
      * 
-     * @param args arguments to be considered. 
+     * @param args arguments to be considered. Filename and Column to be sorted is expected. 
      */
     public static void main(final String[] args)
     {
         System.out.println( "1) Welcome to City Sorter Problem with API \n" );
         System.out.println( "2) For the scope of this problem case is matched as it is read.\n");
 
-        final String filePath = App.class.getClassLoader().getResource("input.csv").getPath();
+        final String filePath = App.class.getClassLoader().getResource(args[0]).getPath();
         System.out.println( "3) Reading the input CSV file from: " + filePath);
 
         final IO io = new CityIO();
@@ -31,7 +31,7 @@ public class App
         System.out.println( "\nOutput prior to Sorting:");
         io.printCities(cities);
         
-        final String columnName = "City";
+        final String columnName = args[1];
         System.out.println( "\nColumn to be sorted is *" + columnName +"*");
         
         CitySorter.sortCityNames(cities, CitySorter.getComparator(columnName, SortingOrder.DESCENDING));
