@@ -3,7 +3,7 @@ Run "mvn clean install" for command runs.
 Open in any IDE to run a Junit. 
 
 I was no sure of weather the output must be written to a csv file or just print. Currently I am printing everything and outputting to a file will not be a big change. 
-Also I ahve tested main combination of happy paths and not failure cases. 
+Also I have tested main combination of happy paths and not failure cases. 
 I can go ahead and update the tests and code as needed. 
 
 Let me know if any additional improvements are required. 
